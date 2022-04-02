@@ -10,6 +10,10 @@
 .col-sm-6 {
   width: 33%;
 }
+.col-sm-6 .card {
+  border: none;
+  cursor: pointer;
+}
 .AdminDashboard-sideNav-a {
   display: block;
   padding: 0.7rem 1rem;
