@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Admin from "../pages/admin/Admin";
 import Manager from '../pages/manager/Manager'
 import Organizer from "../pages/organizer/Organizer";
+import Manager from '../pages/manager/Manager'
 
 const RouteBuilder = () => {
   return (
@@ -12,6 +13,7 @@ const RouteBuilder = () => {
       <Route path="/admin/*" element={<Admin />}></Route> 
       <Route path="/manager/*" element={<Manager />}></Route> 
       <Route path="/organizer/*" element={<Organizer />}></Route>
+      <Route path="/manager/*" element={<Manager />}></Route> 
     </Routes>
   );
 };
