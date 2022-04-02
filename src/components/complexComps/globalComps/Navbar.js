@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import AdminDashboardSideNav from '../AdminDashboardSideNav';
 import AdminDashboardNav from '../AdminDashboardNav';
+import SideNavbar from '../../styleComps/Navbar/SideNavbar';
 
 const StyledNavDiv = styled.div`
     justify-content: space-between;
@@ -15,7 +16,7 @@ const Navbar = (props) => {
     <StyledNavDiv>
     <AdminDashboardNav />
     <div className="mainContent">
-      <AdminDashboardSideNav />
+      <SideNavbar />
       {props.children}
     </div>
   </StyledNavDiv>
