@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const adminToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZlNzdhOGQzY2YwN2E4MzM1NmU0MWEiLCJpYXQiOjE2NDg5MTg4NjR9.Imy2pnEwvCvLdYEOmhH9Cof4ZVo47O0AR2dsGybwR5Q";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ4YzE1YTQ5MjEwYzQxMjM1NGFiMWYiLCJpYXQiOjE2NDg5MzYwNzh9.UtcCyfXzFCnLCwSj-bQilfL74LghE08DA5-M-TIoYGU";
 export const getManagerReqStatus = createAsyncThunk(
   "admin/getManagerReqStatus",
   async (token = adminToken, thunkAPI) => {

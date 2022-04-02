@@ -55,11 +55,11 @@ const AdminRecentRequests = () => {
             return (
               <tr id={item._id}>
                 <td>{item.name}</td>
-                <td>{}</td>
-                <td>9865652365</td>
-                <td>820</td>
-                <td>22000</td>
-                <td>New York</td>
+                <td>{item.auditorium[0].auditoriumName}</td>
+                <td>{item.contact}</td>
+                <td>{item.auditorium[0].capacity}</td>
+                <td>{item.auditorium[0].costPerHour}</td>
+                <td>{item.auditorium[0].city}</td>
                 <td>
                   <div className={style.buttons}>
                     <button type="button" className="btn btn-outline-primary">
