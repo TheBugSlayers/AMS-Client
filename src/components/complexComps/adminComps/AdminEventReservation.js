@@ -9,11 +9,11 @@ const AdminEventReservation = () => {
                     <h4>Event Reservation</h4>
                     <div className="input-group">
                         <div className="form-outline">
-                            <input type="search" id="form1" placeholder='SEARCH' className="form-control" />
+                            <input type="search" id="form1" placeholder='search' className="form-control" />
                         </div>
                         <button type="button" className="btn btn-primary">
                             Name
-                            <img src={vector} />
+                            <img src={vector} alt="vectorImage" />
                         </button>
                     </div>
                 </div>
