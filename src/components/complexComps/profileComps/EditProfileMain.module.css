@@ -1,0 +1,17 @@
+.EditProfileMain img {
+  border-radius: 50%;
+}
+.EditProfileMainForm {
+  margin: 50px 0;
+}
+.EditProfileMain {
+  width: 75%;
+}
+#EditProfileButtons {
+  width: 100%;
+  justify-content: end;
+  display: flex;
+}
+#EditProfileButtons button {
+  margin: 0 5px;
+}

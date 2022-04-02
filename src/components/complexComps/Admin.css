@@ -20,6 +20,9 @@
 .navbar-light .navbar-brand {
   color: #4D4D4D;
 }
+div#v-pills-tab {
+  box-shadow: 0 0 20px 1px #8a8a8a69;
+}
 a.nav-link.link-dark {
   color: #c1c1c1;
 }

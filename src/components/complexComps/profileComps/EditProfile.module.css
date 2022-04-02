@@ -1,0 +1,57 @@
+.EditProfile {
+  text-align: left;
+  color: #3D3D3D;
+}
+
+.adminDashMain {
+  justify-content: space-between;
+}
+
+.navLeft {
+  align-items: center;
+  display: flex;
+}
+
+.navRight {
+  justify-content: space-between;
+  display: flex;
+  width: 7%;
+  align-items: center;
+}
+
+.menus {
+  margin-left: 400px;
+}
+.EditProfile h4 {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+}
+
+.EditProfileMainSection{
+display: flex;    
+}
+.ProfileView img{
+  border-radius: 50%;
+ 
+}
+.ProfileViewImageMain{
+  display: flex;
+}
+.ProfileViewTitle{
+  margin: 0 20px;
+}
+.ProfileViewTitleUpper{
+  display: flex;
+}
+.ProfileViewTitle p{
+font-size: 0.8rem;
+padding: 0 10px;
+opacity: 0.5;
+}
+.EditProfile form{
+  margin: 50px 0;
+}

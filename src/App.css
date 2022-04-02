@@ -1,3 +1,7 @@
 .App {
 
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    border-radius: 0;
+    padding: 9px 100px;
+}
