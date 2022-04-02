@@ -1,0 +1,23 @@
+.adminDashMain{
+    justify-content: space-between;
+}
+.navLeft{
+   align-items: center;
+    display: flex;
+}
+
+.navRight{
+    justify-content: space-between;
+    display: flex;
+    width: 8%;
+ }
+ .AdminDashboardMiddle{
+     display: flex;
+ }
+ .AdminDashboardMiddle{
+     width: 100%;
+     display:block;
+ }
+ .AdminDashboardMiddleMain{
+     display: flex;
+ }
