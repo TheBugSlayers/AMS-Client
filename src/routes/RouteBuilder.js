@@ -1,11 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from '../pages/Home'
+import Admin from "../pages/admin/Admin";
 
 const RouteBuilder = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />}></Route>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/admin/dashboard" element={<Admin />}></Route>
+      <Route path="/admin/userlist" element={<Admin />}></Route>
     </Routes>
   );
 };

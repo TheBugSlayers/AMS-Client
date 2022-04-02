@@ -1,0 +1,12 @@
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.AdminRecentRequests{
+    margin: 50px 0;
+}
+.AdminRecentRequests h2{
+    color: #4D4D4D;
+    text-align: left;
+    font-weight: bold;
+}
