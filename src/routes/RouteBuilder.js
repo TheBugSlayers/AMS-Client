@@ -7,8 +7,7 @@ const RouteBuilder = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />}></Route>
-      <Route path="/admin/dashboard" element={<Admin />}></Route>
-      <Route path="/admin/userlist" element={<Admin />}></Route>
+      <Route path="/admin/*" element={<Admin />}></Route>
     </Routes>
   );
 };
