@@ -21,7 +21,8 @@ const AdminRecentRequests = () => {
                 </div>
             </div>
         </div>
-        <table id="example" className="table table-striped" style={{ width: '100%' }}>
+        <table id={style.RecentRequestsTable} className="table table-striped"
+         style={{ width: '90%' }}>
 
         <thead>
         
