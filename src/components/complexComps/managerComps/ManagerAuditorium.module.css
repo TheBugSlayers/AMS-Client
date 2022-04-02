@@ -1,0 +1,27 @@
+.topaudit {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 80px;
+}
+
+hr {
+  margin-right: 80px;
+}
+.imgs {
+  width: 450px;
+}
+
+.maindiv {
+  text-align: left;
+  display: flex;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+}
+.description {
+    display: flex;
+    justify-content: center;
+  
+  }

@@ -1,0 +1,17 @@
+.topUpdate {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 80px;
+}
+
+.editinfo {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 85px;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+}
