@@ -17,7 +17,10 @@ export const adminSlice = createSlice({
     builder
       .addCase(getManagerReqStatus.pending, (state) => {})
       .addCase(getManagerReqStatus.fulfilled, (state, action) => {
-        state.userList.push(action.payload);
+        console.log(action.payload);
+        state.pendingVerification = action.payload.pendingRequest;
+        state.verifiedManagers = action.payload.verifiedRequest;
+        state.rejectedManagers = action.payload.rejectedRequest;
       });
   },
 });
