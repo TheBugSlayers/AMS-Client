@@ -5,6 +5,7 @@ const adminToken =
 export const getManagerReqStatus = createAsyncThunk(
   "admin/getManagerReqStatus",
   async (token = adminToken, thunkAPI) => {
+    //pending
     const pendingResponse = await fetch(
       "https://ams-server-test.herokuapp.com/admin/managerList?status=pending",
       {
@@ -48,5 +49,23 @@ export const getManagerReqStatus = createAsyncThunk(
       verifiedRequest,
       rejectedRequest,
     };
+  }
+);
+
+export const getManagerPendingReqs = createAsyncThunk(
+  "admin/getManagerPendingReqs",
+  async (token = adminToken, thunkAPI) => {
+    const response = await fetch(
+      "https://ams-server-test.herokuapp.com/admin/managerList?status=pending",
+      {
+        method: "GET",
+        headers: {
+          Authorization: "bearer " + token,
+        },
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+    return data;
   }
 );

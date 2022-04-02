@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getManagerReqStatus } from "../action-creaters";
+import { getManagerPendingReqs, getManagerReqStatus } from "../action-creaters";
 
 const initialState = {
   pendingVerification: "",
@@ -21,6 +21,9 @@ export const adminSlice = createSlice({
         state.pendingVerification = action.payload.pendingRequest;
         state.verifiedManagers = action.payload.verifiedRequest;
         state.rejectedManagers = action.payload.rejectedRequest;
+      })
+      .addCase(getManagerPendingReqs.fulfilled, (state, action) => {
+        state.managerRequests = action.payload.managerList;
       });
   },
 });
