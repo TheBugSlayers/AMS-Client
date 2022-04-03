@@ -10,7 +10,7 @@ import AdminEventReservation from "../../components/complexComps/adminComps/Admi
 const Admin = () => {
   return (
     <div className={style.adminDashMain}>
-      <AdminDashboardNav />
+      <AdminDashboardNav navTitle="Admin" />
       <div className={style.AdminDashboardMiddleMain}>
         <AdminDashboardSideNav />
         <Routes>
