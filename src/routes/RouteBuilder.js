@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Admin from "../pages/admin/Admin";
 import Manager from "../pages/manager/Manager";
 import Organizer from "../pages/organizer/Organizer";
+import Profile from "../pages/profile/Profile";
 import PageNotFound from "../pages/ErrorPage/PageNotFound";
 
 const RouteBuilder = () => {
@@ -11,7 +12,7 @@ const RouteBuilder = () => {
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/admin/*" element={<Admin />}></Route>
-      <Route path="/manager/*" element={<Manager />}></Route>
+      <Route path="/user/*" element={<Profile />}></Route>
       <Route path="/organizer/*" element={<Organizer />}></Route>
       <Route path="/manager/*" element={<Manager />}></Route>
       <Route path="*" element={<PageNotFound />}></Route>
