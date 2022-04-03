@@ -92,7 +92,7 @@ const AdminRecentRequests = () => {
                 className="form-control"
               />
             </div>
-            <button type="button" className="btn btn-primary">
+            <button type="button" id={style.AdminSearchButton} className="btn btn-primary">
               <div>
                 Name
                 <img src={vector} alt="" />
