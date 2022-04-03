@@ -10,7 +10,7 @@ import ManagerAudiEdit from "../../components/complexComps/managerComps/ManagerA
 const Admin = () => {
   return (
     <div className={style.adminDashMain}>
-      <AdminDashboardNav />
+      <AdminDashboardNav navTitle="Manager" />
       <div className={style.AdminDashboardMiddleMain}>
         <AdminDashboardSideNav />
         <Routes>

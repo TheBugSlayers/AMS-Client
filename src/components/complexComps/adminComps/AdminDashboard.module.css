@@ -1,15 +1,20 @@
 .adminDashMain{
     justify-content: space-between;
 }
+#adminNavContainer{
+    max-width: 1200px auto;
+}
 .navLeft{
-   align-items: center;
+    align-items: center;
     display: flex;
+    justify-content: space-between;
+    width: 22%;
 }
 
 .navRight{
     justify-content: space-between;
     display: flex;
-    width: 8%;
+    width: 6%;
  }
  .AdminDashboardMiddle{
      display: flex;
