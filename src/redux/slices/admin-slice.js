@@ -1,5 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getManagerPendingReqs, getManagerReqStatus } from "../action-creaters";
+import {
+  acceptManagerReq,
+  fetchAllEvents,
+  fetchAllUsers,
+  getManagerPendingReqs,
+  getManagerReqStatus,
+  rejectManagerReq,
+} from "../action-creaters";
 
 const initialState = {
   pendingVerification: "",
@@ -7,7 +14,7 @@ const initialState = {
   rejectedManagers: "",
   managerRequests: [],
   userList: [],
-  eventReservation: [],
+  eventList: [],
 };
 export const adminSlice = createSlice({
   name: "admin",
@@ -24,7 +31,15 @@ export const adminSlice = createSlice({
       })
       .addCase(getManagerPendingReqs.fulfilled, (state, action) => {
         state.managerRequests = action.payload.managerList;
-      });
+      })
+      .addCase(fetchAllUsers.fulfilled, (state, action) => {
+        state.userList = action.payload;
+      })
+      .addCase(fetchAllEvents.fulfilled, (state, action) => {
+        state.eventList = action.payload;
+      })
+      .addCase(acceptManagerReq.fulfilled, (state, action) => {})
+      .addCase(rejectManagerReq.fulfilled, (state, action) => {});
   },
 });
 
