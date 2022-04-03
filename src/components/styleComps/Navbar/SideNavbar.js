@@ -1,44 +1,45 @@
-import React from 'react'
-import styles from '../../../components/complexComps/AdminDashboardSideNav.module.css';
-import icon1 from '../../../utils/static/images/dashboardNavIcon.png';
-import icon2 from '../../../utils/static/images/eventRegNavIcon.png';
-import icon3 from '../../../utils/static/images/profileNavIcon.png';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import styles from "../../../components/complexComps/AdminDashboardSideNav.module.css";
+import { Link } from "react-router-dom";
 
-
-
-const SideNavbar = () => {
+const SideNavbar = ({ sideNavData }) => {
+  console.log(sideNavData);
+  const [sideNavItem, setSideNavItem] = useState(0);
+  const activeItem = "nav-link active AdminDashboard-sideNav-a text-white";
+  const nonActiveItem = "nav-link AdminDashboard-sideNav-a text-muted";
   return (
     <div className={styles.AdminDashboardSideNav}>
-      <div className="d-flex flex-column flex-shrink-0 p-3 bg-light" style={{ width: 280 }}>
-
+      <div
+        className="d-flex flex-column flex-shrink-0 p-3 bg-light"
+        style={{ width: 280, backgroundColor: "white" }}
+      >
         <ul className="nav nav-pills flex-column mb-auto">
-          <li className="nav-item AdminDashboard-sideNav-li">
-            <Link to="dashboard" className="nav-link active AdminDashboard-sideNav-a" aria-current="page">
-              <svg className="bi me-2" width="16" height="20"></svg>
-              <img src={icon1} alt="" /> Dashboard
-            </Link>
-          </li>
-          <li>
-            <Link to="userlist" className="nav-link link-dark">
-              <svg className="bi me-2" width="16" height="20"></svg>
-              <img src={icon3} alt="" />  User list
-            </Link>
-          </li>
-
-          <li>
-            <Link to="eventreservation" className="nav-link link-dark">
-              <svg className="bi me-2" width="16" height="20"></svg>
-              <img src={icon2} alt="" />   Event Reservation
-            </Link>
-          </li>
-
+          {sideNavData.map((obj, index) => {
+            console.log(obj);
+            return (
+              <li
+                className="nav-item AdminDashboard-sideNav-li"
+                onClick={() => {
+                  setSideNavItem(index);
+                }}
+              >
+                <Link
+                  to={obj.link}
+                  className={sideNavItem === index ? activeItem : nonActiveItem}
+                  aria-current="page"
+                >
+                  <div className={styles.navDiv}>
+                    <img src={obj.icon} alt="" className={styles.img} />
+                    <div className={styles.navTitle}>{obj.title}</div>
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
-
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default SideNavbar
+export default SideNavbar;
