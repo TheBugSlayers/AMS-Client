@@ -8,6 +8,8 @@ import addevent from "../../utils/static/images/addevent.png";
 import myevents from "../../utils/static/images/myevents.png";
 import transaction from "../../utils/static/images/transaction.png";
 import OrganizerBook from "../../components/complexComps/organizerComps/OrganizerBook";
+import OrganizerMyEvents from "../../components/complexComps/organizerComps/OrganizerMyEvents";
+import OrganizerDeatilView from "../../components/complexComps/organizerComps/OrganizerDeatilView";
 
 const Organizer = () => {
   // const organizerNavContent = [
@@ -44,6 +46,10 @@ const Organizer = () => {
         <Route path="dashboard" element={<OrganizerDash />} />
         <Route path="addevent" element={<OrganizerAddEvent />} />
         <Route path="addevent/book/:id" element={<OrganizerBook />} />
+        <Route path="myevents" element={<OrganizerMyEvents/>} />
+        <Route path="myevents/detailview" element={<OrganizerDeatilView/>} />
+
+
       </Routes>
     </Navbar>
   );
