@@ -1,9 +1,6 @@
 import React from "react";
-import AdminDashboardNav from "../../components/complexComps/AdminDashboardNav";
-import AdminDashboardSideNav from "../../components/complexComps/AdminDashboardSideNav";
 import ManagerDashboard from "../../components/complexComps/managerComps/ManagerDashboard";
 import { Route, Routes } from "react-router-dom";
-import style from "../../components/complexComps/adminComps/AdminDashboard.module.css";
 import ManagerAuditorium from "../../components/complexComps/managerComps/ManagerAuditorium";
 import ManagerAudiEdit from "../../components/complexComps/managerComps/ManagerAudiEdit";
 import ManagerBooking from "../../components/complexComps/managerComps/ManagerBooking";

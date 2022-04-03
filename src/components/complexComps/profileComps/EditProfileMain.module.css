@@ -12,7 +12,6 @@
 }
 #EditProfileButtons {
   width: 100%;
-  justify-content: end;
   display: flex;
 }
 #EditProfileButtons button {
