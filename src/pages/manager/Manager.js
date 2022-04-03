@@ -9,7 +9,7 @@ import ManagerAudiEdit from "../../components/complexComps/managerComps/ManagerA
 import ManagerBooking from "../../components/complexComps/managerComps/ManagerBooking";
 import ManageTransactHist from "../../components/complexComps/managerComps/ManageTransactHist";
 
-const Admin = () => {
+const Manager = () => {
   return (
     <div className={style.adminDashMain}>
       <AdminDashboardNav />
@@ -29,4 +29,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Manager;
