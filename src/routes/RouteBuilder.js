@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Admin from "../pages/admin/Admin";
 import Manager from "../pages/manager/Manager";
 import Organizer from "../pages/organizer/Organizer";
+import PageNotFound from "../pages/ErrorPage/PageNotFound";
 
 const RouteBuilder = () => {
   return (
@@ -13,6 +14,7 @@ const RouteBuilder = () => {
       <Route path="/manager/*" element={<Manager />}></Route>
       <Route path="/organizer/*" element={<Organizer />}></Route>
       <Route path="/manager/*" element={<Manager />}></Route>
+      <Route path="*" element={<PageNotFound />}></Route>
     </Routes>
   );
 };
