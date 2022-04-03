@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "../../components/complexComps/globalComps/Navbar";
 import OrganizerDash from "../../components/complexComps/organizerComps/OrganizerDash";
+import OrganizerAddEvent from "../../components/complexComps/organizerComps/OrganizerAddEvent";
 import { Route, Routes } from "react-router-dom";
 import dashboard from "../../utils/static/images/dashboard.png";
 import addevent from "../../utils/static/images/addevent.png";
 import myevents from "../../utils/static/images/myevents.png";
 import transaction from "../../utils/static/images/transaction.png";
+import OrganizerBook from "../../components/complexComps/organizerComps/OrganizerBook";
 
 const Organizer = () => {
   // const organizerNavContent = [
@@ -26,8 +28,8 @@ const Organizer = () => {
       icon: myevents,
     },
     {
-      title: "Add Events",
-      link: "addevents",
+      title: "Add Event",
+      link: "addevent",
       icon: addevent,
     },
     {
@@ -40,6 +42,8 @@ const Organizer = () => {
     <Navbar sideNavData={organizerNavContent}>
       <Routes>
         <Route path="dashboard" element={<OrganizerDash />} />
+        <Route path="addevent" element={<OrganizerAddEvent />} />
+        <Route path="addevent/book/:id" element={<OrganizerBook />} />
       </Routes>
     </Navbar>
   );
