@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Card } from 'react-bootstrap';
 import eventImage from "../../../utils/static/images/event.png"
 import location from "../../../utils/static/images/location.png"
+import { Link } from 'react-router-dom';
 
 
 
@@ -52,6 +53,12 @@ img{
     color: #4D4D4D;
 }
 
+.footerDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .priceDiv{
     display: flex;
     gap: 1em;
@@ -61,6 +68,7 @@ img{
     color: #8B8B8B;
 }
 `;
+
 
 const StyledChip = styled.button`
 display: flex;
@@ -82,7 +90,24 @@ color: #296DF1;
 
 `;
 
-const EventCard = () => {
+const StyledButton = styled.button`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 12px;
+
+/* width: 53px;
+height: 28px; */
+
+/* Primary/Primary */
+color: #fff;
+background: #296DF1;
+border-radius: 4px;
+border: 0;
+`;
+
+const EventCard = (props) => {
     return (
         <StyledDiv>
             <img src={eventImage} alt="eventImage" />
@@ -95,12 +120,18 @@ const EventCard = () => {
                 <div className='descDiv'>
                     <img src={location} alt="eventImage" />
                     <div className='descText'>
-                    28 Wall Avenue, Las Cruces,nm, 88001  United States
+                        28 Wall Avenue, Las Cruces,nm, 88001  United States
                     </div>
                 </div>
 
-                <div className='priceDiv'>
-                $100  |  26, Aug
+                <div className='footerDiv'>
+                    <div className='priceDiv'>
+                        $100  |  26, Aug
+                    </div>
+                    {props.isButton &&
+                        
+                        <Link to={props.link}><StyledButton>Book</StyledButton></Link>
+                    }
                 </div>
             </StyledContent>
         </StyledDiv>
