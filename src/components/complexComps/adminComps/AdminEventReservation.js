@@ -56,7 +56,7 @@ const AdminEventReservation = () => {
                 <td>{item.event_date}</td>
                 <td>{item.city}</td>
                 <td>{item.event_time}</td>
-                <td>{item.bookedBy[0].name}</td>
+                <td>organizer</td>
                 <td>{item.ticket_price}</td>
                 <td>{item.total_cost}</td>
               </tr>

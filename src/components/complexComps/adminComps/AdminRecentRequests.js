@@ -6,6 +6,7 @@ import {
   acceptManagerReq,
   adminToken,
   getManagerPendingReqs,
+  getManagerReqStatus,
   rejectManagerReq,
 } from "../../../redux/action-creaters";
 
@@ -39,7 +40,8 @@ const AdminRecentRequests = () => {
           console.log({
             msg: "Update Successfully",
           });
-          window.location.reload();
+          dispatch(getManagerPendingReqs());
+          dispatch(getManagerReqStatus());
         }
       })
       .catch((err) => {
@@ -70,7 +72,8 @@ const AdminRecentRequests = () => {
           console.log({
             msg: "Reject Successfully",
           });
-          window.location.reload();
+          dispatch(getManagerPendingReqs());
+          dispatch(getManagerReqStatus());
         }
       })
       .catch((err) => {
@@ -92,7 +95,11 @@ const AdminRecentRequests = () => {
                 className="form-control"
               />
             </div>
-            <button type="button" id={style.AdminSearchButton} className="btn btn-primary">
+            <button
+              type="button"
+              id={style.AdminSearchButton}
+              className="btn btn-primary"
+            >
               <div>
                 Name
                 <img src={vector} alt="" />
