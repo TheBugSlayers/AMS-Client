@@ -4,7 +4,8 @@ import style from './AdminUserList.module.css';
 
 const AdminUserList = () => {
     return (
-        <div className={style.AdminUserList}>
+        <div id={style.AdminUserListParent}>
+            <div className={style.AdminUserList}>
                 <div className='text-md-left' style={{ textAlign: 'left' }}>
                     <h4>User List</h4>
                     <Dropdown>
@@ -43,10 +44,7 @@ const AdminUserList = () => {
                         </tr>
                     </tbody>
                 </table>
-
-
-        
-
+            </div>
         </div>
     )
 }

@@ -9,6 +9,7 @@
     color: #4D4D4D;
     text-align: left;
     font-weight: bold;
+    font-size: 18px;
 }
 #RecentRequestsTable th{
   font-weight: bold;
@@ -18,4 +19,7 @@
   color: #3D3D3D;
   font-weight: 500;
 
+}
+#AdminSearchButton img{
+padding: 0 5px;
 }
