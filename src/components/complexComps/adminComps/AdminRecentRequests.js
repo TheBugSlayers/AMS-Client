@@ -2,7 +2,11 @@ import React, { useEffect } from "react";
 import style from "./AdminRecentRequests.module.css";
 import vector from "../../../utils/static/images/Vector.png";
 import { useDispatch, useSelector } from "react-redux";
-import { getManagerPendingReqs } from "../../../redux/action-creaters";
+import {
+  acceptManagerReq,
+  getManagerPendingReqs,
+  rejectManagerReq,
+} from "../../../redux/action-creaters";
 
 const AdminRecentRequests = () => {
   const dispatch = useDispatch();
@@ -11,6 +15,12 @@ const AdminRecentRequests = () => {
     dispatch(getManagerPendingReqs());
   }, []);
   console.log(managerRequests);
+  const handleAcceptReq = (managerId) => {
+    dispatch(acceptManagerReq(managerId));
+  };
+  const handleRejectReq = (managerId) => {
+    dispatch(rejectManagerReq(managerId));
+  };
   return (
     <>
       <div className={style.AdminRecentRequests}>
@@ -53,7 +63,7 @@ const AdminRecentRequests = () => {
         <tbody>
           {managerRequests.map((item, index) => {
             return (
-              <tr id={item._id}>
+              <tr key={item._id}>
                 <td>{item.name}</td>
                 <td>{item.auditorium[0].auditoriumName}</td>
                 <td>{item.contact}</td>
@@ -62,10 +72,22 @@ const AdminRecentRequests = () => {
                 <td>{item.auditorium[0].city}</td>
                 <td>
                   <div className={style.buttons}>
-                    <button type="button" className="btn btn-outline-primary">
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={(event) => {
+                        handleAcceptReq(item._id);
+                      }}
+                    >
                       Accept
                     </button>
-                    <button type="button" className="btn btn-outline-danger">
+                    <button
+                      type="button"
+                      className="btn btn-outline-danger"
+                      onClick={(event) => {
+                        handleRejectReq(item._id);
+                      }}
+                    >
                       Reject
                     </button>
                   </div>
