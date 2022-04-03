@@ -4,7 +4,7 @@ import vector from '../../../utils/static/images/Vector.png'
 
 const ManagerDashboard = () => {
     return (
-        <div >
+        <div style={{ width: '100%' }}>
             <div className={style.ManagerRecentRequests}>
                 <div className='text-md-left'>
                     <h2>Recent Requests</h2>
@@ -22,16 +22,16 @@ const ManagerDashboard = () => {
                 </div>
             </div>
             <table id={style.RecentRequestsTable} className="table table-striped"
-                style={{ width: '100%' }}>
+                style={{ width: '90%',textAlign: 'center' }}>
                 <thead>
                     <tr>
-                        <th>Manager Name</th>
-                        <th>Auditorium Name</th>
-                        <th>Manager Contact</th>
-                        <th>Capacity</th>
-                        <th>Cost/hr</th>
-                        <th>City</th>
-                        <th>Action</th>
+                        <th>Booked By</th>
+                        <th>Email</th>
+                        <th>Contact No</th>
+                        <th>Payment</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Total Cost</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,14 +39,32 @@ const ManagerDashboard = () => {
                         <td>Jon Doe</td>
                         <td>Apple theatre</td>
                         <td>9865652365</td>
-                        <td>820</td>
+                        <td>
+                            <div className={style.buttons}>
+                                <button style={{borderRadius:70}} disabled type="button" className="btn btn-outline-danger">Unpaid</button>
+                            </div>
+
+                        </td>
                         <td>22000</td>
                         <td>New York</td>
                         <td>
+                            24,000  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jon Doe</td>
+                        <td>Apple theatre</td>
+                        <td>9865652365</td>
+                        <td>
                             <div className={style.buttons}>
-                                <button type="button" className="btn btn-outline-primary">Accept</button>
-                                <button type="button" className="btn btn-outline-danger">Reject</button>
+                                <button style={{borderRadius:70}} disabled type="button" className="btn btn-outline-success">Paid</button>
                             </div>
+
+                        </td>
+                        <td>22000</td>
+                        <td>New York</td>
+                        <td>
+                            24,000  
                         </td>
                     </tr>
                 </tbody>
@@ -54,7 +72,7 @@ const ManagerDashboard = () => {
 
             <div>
                 <h3 className='text-left'>This Week</h3>
-                <br/>
+                <br />
                 <div className={style.Bookinfo}>
                     <div>
                         <p>Total Booking</p>

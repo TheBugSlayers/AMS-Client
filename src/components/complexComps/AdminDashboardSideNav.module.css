@@ -1,26 +1,32 @@
-.AdminDashboardSideNav ul{
-    text-align: left;
-    font-weight: bold;
-    height: 100%;
-    background-color: #fff;
-    padding: 0.7em;
+.AdminDashboardSideNav ul {
+  text-align: left;
+  font-weight: bold;
+  height: 100%;
+  background-color: #fff;
+  padding: 0.7em;
 }
 
-.navTitle{
-    font-size: 14px;
-    color: #C1C1C1;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 17px;
+.AdminDashboardSideNav li {
+  /* box-shadow: 0 0 12px 1px #c5c5c5; */
+
+  padding: 8px 0;
 }
 
-.navDiv{
-    display: flex;
-    gap: 1em;
-    align-items: center;
+.navTitle {
+  font-size: 14px;
+  color: #c1c1c1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
 }
 
-.img{
-height: 24px;
-width: 24px;
+.navDiv {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.img {
+  height: 24px;
+  width: 24px;
 }
