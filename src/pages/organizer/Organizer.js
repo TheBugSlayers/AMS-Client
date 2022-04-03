@@ -39,7 +39,7 @@ const Organizer = () => {
     },
   ];
   return (
-    <Navbar sideNavData={organizerNavContent}>
+    <Navbar sideNavData={organizerNavContent} pageTitle="Organizer">
       <Routes>
         <Route path="dashboard" element={<OrganizerDash />} />
         <Route path="addevent" element={<OrganizerAddEvent />} />
