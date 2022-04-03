@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const adminToken =
+export const adminToken =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ4YzE1YTQ5MjEwYzQxMjM1NGFiMWYiLCJpYXQiOjE2NDg5NTgyNDd9.5ND1pvtpcjcH3_nkG9yFuK8hkM1GGWTe_DoknDDj_tA";
 export const getManagerReqStatus = createAsyncThunk(
   "admin/getManagerReqStatus",
@@ -111,22 +111,30 @@ export const fetchAllEvents = createAsyncThunk(
 //accept manager request
 export const acceptManagerReq = createAsyncThunk(
   "admin/acceptManagerReq",
-  async (managerId, thunkAPI) => {
+  async (managerId, event, thunkAPI) => {
+    event.preventDefault();
+
     const response = await fetch(
       "https://auditoriaserver.herokuapp.com/admin/setManagerStatus",
       {
         method: "POST",
-        body: {
+        body: JSON.stringify({
           managerId: managerId,
           verificationStatus: "true",
-        },
+        }),
         headers: {
+          "Content-Type": "application/json",
           Authorization: "bearer " + adminToken,
         },
       }
     );
     const data = await response.json();
-    console.log(data);
+    if (!data) {
+      throw new Error("id not found");
+    } else {
+      console.log(data);
+      window.location.reload();
+    }
     return data;
   }
 );
@@ -138,6 +146,7 @@ export const rejectManagerReq = createAsyncThunk(
       "https://auditoriaserver.herokuapp.com/admin/setManagerStatus",
       {
         method: "POST",
+        "Content-Type": "application/json",
         body: JSON.stringify({
           managerId: managerId,
           verificationStatus: "false",
