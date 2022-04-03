@@ -3,20 +3,18 @@ import {
   PrimaryButton,
   SecondaryButton,
 } from "../components/styleComps/Buttons";
+import Login from './login/Login';
 
 const Home = () => {
 
-      const handleClick = () => {
-        console.log("Button clicked");
-      };
-
     return (
       <>
-        <div>Home</div>
+        <Login/>
+        {/* <div>Home</div>
         <PrimaryButton onClick={handleClick}>Hello</PrimaryButton>
-        <SecondaryButton>Hii there</SecondaryButton>
+        <SecondaryButton>Hii there</SecondaryButton> */}
       </>
     );
 }
 
-export default Home
+export default Home;

@@ -69,3 +69,19 @@ export const getManagerPendingReqs = createAsyncThunk(
     return data;
   }
 );
+
+//login
+export const login = createAsyncThunk(
+  "login",
+  async (payload,thunkAPI) => {
+    const response = await fetch(
+      "https://auditoriaserver.herokuapp.com/user/login",
+      {
+        method: "POST",
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+    return data;
+  }
+);
