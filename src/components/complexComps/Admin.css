@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 .container {
   max-width: 1200px auto;
@@ -22,7 +22,9 @@
   padding: 5px 0;
 }
 .navbar-light .navbar-brand {
-  color: #4D4D4D;
+  color: #4d4d4d;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 a.nav-link.link-dark {
   color: #c1c1c1;

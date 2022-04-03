@@ -1,0 +1,40 @@
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .ManagerRecentRequests{
+      margin: 50px 0;
+  }
+  .ManagerRecentRequests h2{
+      color: #4D4D4D;
+      text-align: left;
+      font-weight: bold;
+  }
+  #RecentRequestsTable th{
+    font-weight: bold;
+    color: #3D3D3D;
+  }
+  #RecentRequestsTable td{
+    color: #3D3D3D;
+    font-weight: 500;
+  }
+
+  h3{
+    text-align: left;
+  }
+  .Bookinfo{
+    display: flex;
+  }
+  .profitinfo{
+    padding:0px 85px;
+  }
+
+  .topbreadcrum{
+    display: flex;
+    max-width: 320px;
+    justify-content: space-between;
+    
+  }
+  a{
+    text-decoration: none;
+  }
