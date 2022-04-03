@@ -10,9 +10,7 @@ const Home = () => {
     return (
       <>
         <Login/>
-        {/* <div>Home</div>
-        <PrimaryButton onClick={handleClick}>Hello</PrimaryButton>
-        <SecondaryButton>Hii there</SecondaryButton> */}
+      
       </>
     );
 }

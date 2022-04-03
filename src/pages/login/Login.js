@@ -14,13 +14,14 @@ const Login = () => {
     },
     validate,
     onSubmit: (values) => {
-      
+      console.log(values);
       dispatch(
         login({
           email: values.email,
           password: values.password,
         })
       );
+    
       formik.resetForm();
     },
   });

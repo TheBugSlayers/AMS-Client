@@ -12,7 +12,7 @@ const AdminDashboardNav = (props) => {
   <div className="container-fluid container" id={style.adminNavContainer} style={{  maxWidth: '1300px' }}>
       <div className={style.navLeft}>
    <div> <img src={AuditoriaLogo} className="navbar-brand" alt=""/> </div>
-    <div><Link to="" className="navbar-brand">{props.navTitle}</Link>  </div>
+    <div><Link to="" className="navbar-brand">{props.pageTitle}</Link>  </div>
     </div>
     <div className={style.navRight}>
      <div> <img src={notifictionIcon} className="admin-profile-image" alt="" /> </div>
