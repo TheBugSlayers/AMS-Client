@@ -42,7 +42,7 @@ const RouteBuilder = (props) => {
       {userRole === "admin" && <Route path="/admin/*" element={<Admin />}></Route>}
       {userRole === "manager" && <Route path="/manager/*" element={userRole === "manager" ? <Manager /> : <Navigate to="*"/>}></Route>}
       <Route path="/organizer/*" element={<Organizer />}></Route>
-      <Route path="/user/" element={<Profile />}></Route>
+      <Route path="/user/*" element={<Profile />}></Route>
       <Route path="*" element={<PageNotFound />}></Route>
  
     </Routes>
