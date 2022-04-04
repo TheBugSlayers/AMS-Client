@@ -14,7 +14,7 @@ const StyledNavDiv = styled.div`
 const Navbar = (props) => {
   return (
     <StyledNavDiv>
-      <AdminDashboardNav />
+      <AdminDashboardNav pageTitle={props.pageTitle}/>
       <div className="mainContent">
         <SideNavbar sideNavData={props.sideNavData} />
         {props.children}

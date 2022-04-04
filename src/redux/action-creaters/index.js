@@ -161,3 +161,29 @@ export const rejectManagerReq = createAsyncThunk(
     return data;
   }
 );
+
+//login
+export const login = createAsyncThunk(
+  "login",
+  async (payload, thunkAPI) => {
+    console.log(payload);
+    const response = await fetch(
+      "https://auditoriaserver.herokuapp.com/user/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: payload.email,
+          password: payload.password
+        })
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+    return data;
+  }
+);
+
+

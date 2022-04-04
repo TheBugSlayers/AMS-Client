@@ -4,19 +4,17 @@ import {
   PrimaryButton,
   SecondaryButton,
 } from "../components/styleComps/Buttons";
-import style from "./Home.module.css";
+
+import Login from './login/Login';
+
 const Home = () => {
 
-
-  return (
-    <>
-    <div className={style.HomeMain}>
-      <Link to="/admin/dashboard" >  <PrimaryButton >Admin Dashboard</PrimaryButton> </Link>
-      <Link to="/manager/dashboard" >  <PrimaryButton>Manager Dashboard</PrimaryButton> </Link>
-      <Link to="/organizer/dashboard" >  <PrimaryButton>Organizer Dashboard</PrimaryButton></Link>
-      </div>
-    </>
-  );
+    return (
+      <>
+        <Login/>
+      
+      </>
+    );
 }
 
-export default Home
+export default Home;
