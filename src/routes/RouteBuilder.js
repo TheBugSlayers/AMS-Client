@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import Admin from "../pages/admin/Admin";
 import Manager from "../pages/manager/Manager";
 import Organizer from "../pages/organizer/Organizer";
+import Profile from "../pages/profile/Profile";
+import PageNotFound from "../pages/ErrorPage/PageNotFound";
 import { useSelector } from "react-redux";
 
 const RouteBuilder = (props) => {
@@ -31,6 +33,7 @@ const RouteBuilder = (props) => {
 
   return (
     <Routes>
+
       {!isLoggedIn ? (
         <Route path="/" element={<Home />}></Route>
       ) : (
@@ -39,6 +42,9 @@ const RouteBuilder = (props) => {
       {userRole === "admin" && <Route path="/admin/*" element={<Admin />}></Route>}
       {userRole === "manager" && <Route path="/manager/*" element={<Manager />}></Route>}
       <Route path="/organizer/*" element={<Organizer />}></Route>
+      <Route path="/user/*" element={<Profile />}></Route>
+      <Route path="*" element={<PageNotFound />}></Route>
+ 
     </Routes>
 
     // <Routes>

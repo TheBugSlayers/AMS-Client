@@ -1,0 +1,54 @@
+button {
+  margin: 0 10px;
+  border: none;
+  background: #0d6efd;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 1px 7px;
+  cursor: pointer;
+}
+.PageNotFound img{
+border-radius: 15px;
+}
+.PageNotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(20%);
+}
+.PageNotFound h1 {
+  padding: 20px 0;
+}
+.PageNotFoundMain {
+  background-color: #e5e5e5;
+  height: 100vh;
+}
+#notFound {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+.darkMode-main {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+#darkMode-btn {
+  background-color: #202a2a;
+}
+.RefreshCw {
+  height: 20px;
+  margin: 0 2px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    /* width: 0%; */
+  }
+  to {
+    opacity: 1;
+    /* width: 100%;  */
+  }
+}

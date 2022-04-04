@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllUsers } from "../../../redux/action-creaters";
+import { adminToken, fetchAllUsers } from "../../../redux/action-creaters";
 import style from "./AdminUserList.module.css";
 
 const AdminUserList = () => {
@@ -10,6 +10,33 @@ const AdminUserList = () => {
   useEffect(() => {
     dispatch(fetchAllUsers());
   }, []);
+  const handleRemoveReq = (e, userId) => {
+    // dispatch(acceptManagerReq(managerId, event));
+
+    fetch(`https://auditoriaserver.herokuapp.com/admin/removeUser/${userId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + adminToken,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.error) {
+          console.log(data.error);
+        } else {
+          console.log({
+            msg: "Delete Successfully",
+          });
+          dispatch(fetchAllUsers());
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className={style.AdminUserList}>
       <div className="text-md-left" style={{ textAlign: "left" }}>
@@ -49,7 +76,13 @@ const AdminUserList = () => {
                 <td>{item.role}</td>
                 <td>
                   <div className={style.buttons}>
-                    <button type="button" className="btn btn-outline-danger">
+                    <button
+                      type="button"
+                      className="btn btn-outline-danger"
+                      onClick={(e) => {
+                        handleRemoveReq(e, item._id);
+                      }}
+                    >
                       Remove
                     </button>
                   </div>
@@ -64,4 +97,3 @@ const AdminUserList = () => {
 };
 
 export default AdminUserList;
-
