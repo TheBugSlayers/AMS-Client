@@ -12,33 +12,7 @@ function App() {
   
   
   useEffect(() => {
-    // console.log("In App js");
     dispatch(getManagerReqStatus());
-    // authToken = localStorage.getItem("authToken");
-    // console.log(authToken);
-    // authToken !== null && fetch("https://auditoriaserver.herokuapp.com/user/profile", {
-    //   method: "get",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: "Bearer " + authToken,
-    //   },
-    // })
-    //   .then((res) => res.json())
-    //   .then((datadetail) => {
-    //     if (datadetail.error) {
-    //       console.log(datadetail.error);
-    //     } else {
-    //       console.log(datadetail);
-    //       dispatch(setUserDetails());
-    //       // setProfessionals(datadetail);
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-
-   
-
   }, []);
 
   return (

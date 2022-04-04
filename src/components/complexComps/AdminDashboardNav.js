@@ -8,21 +8,43 @@ import { Link } from 'react-router-dom';
 const AdminDashboardNav = (props) => {
   return (
     <div>
-         <nav className="navbar navbar-light bg-light">
-  <div className="container-fluid container" id={style.adminNavContainer} style={{  maxWidth: '1300px' }}>
-      <div className={style.navLeft}>
-   <div> <img src={AuditoriaLogo} className="navbar-brand" alt=""/> </div>
-    <div><Link to="" className="navbar-brand">{props.pageTitle}</Link>  </div>
-    </div>
-    <div className={style.navRight}>
-     <div> <img src={notifictionIcon} className="admin-profile-image" alt="" /> </div>
-     <div> <img src={adminAvatar} className="admin-profile-image"  alt="" /></div>
+      <nav className="navbar navbar-light bg-light">
+        <div
+          className="container-fluid container"
+          id={style.adminNavContainer}
+          style={{ maxWidth: "1300px" }}
+        >
+          <div className={style.navLeft}>
+            <div>
+              {" "}
+              <Link to="/">
+                <img src={AuditoriaLogo} className="navbar-brand" alt="" />
+              </Link>{" "}
+            </div>
+            <div>
+              <Link to="" className="navbar-brand">
+                {props.pageTitle}
+              </Link>{" "}
+            </div>
+          </div>
+          <div className={style.navRight}>
+            <div>
+              {" "}
+              <img
+                src={notifictionIcon}
+                className="admin-profile-image"
+                alt=""
+              />{" "}
+            </div>
+            <div>
+              {" "}
+              <img src={adminAvatar} className="admin-profile-image" alt="" />
+            </div>
+          </div>
         </div>
-  </div>
-</nav>
-
+      </nav>
     </div>
-  )
+  );
 }
 
 export default AdminDashboardNav

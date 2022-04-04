@@ -28,10 +28,15 @@ export const loginSlice = createSlice({
     extraReducers: (builder) => {
       builder.addCase(login.fulfilled, (state, action) => {
         state.userDetails = action.payload.user;
-        state.token = action.payload.token;
+        state.token = action.payload.authToken;
         // localStorage.setItem("userDetails", action.payload);
         state.isLoggedIn = true;
-        localStorage.setItem("userDetails", JSON.stringify(action.payload));
+        const userObj = {
+          isLoggedIn: true,
+          token: action.payload.authToken,
+          userDetails: action.payload.user,
+        };
+        localStorage.setItem("userDetails", JSON.stringify(userObj));
       });
   }
 });
