@@ -8,11 +8,12 @@ import { Link } from 'react-router-dom';
 const AdminDashboardNav = (props) => {
   return (
     <div>
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light bg-light"
+      >
         <div
-          className="container-fluid container"
+          className="container-fluid container justify-content-between"
           id={style.adminNavContainer}
-          style={{ maxWidth: "1300px" }}
+          style={{  maxWidth: "100%", margin: "0 1em"}}
         >
           <div className={style.navLeft}>
             <div>
@@ -38,7 +39,9 @@ const AdminDashboardNav = (props) => {
             </div>
             <div>
               {" "}
-              <img src={adminAvatar} className="admin-profile-image" alt="" />
+              <Link to="/user/profile">
+                <img src={adminAvatar} className="admin-profile-image" alt="" />
+              </Link>
             </div>
           </div>
         </div>

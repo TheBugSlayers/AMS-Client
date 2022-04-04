@@ -5,12 +5,27 @@ import style from './EditProfile.module.css';
 import EditProfileMain from './EditProfileMain';
 import { Link, Route, Routes } from "react-router-dom";
 import adminAvatarLarge from "../../../utils/static/images/adminIconLarge.png";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from '../../../redux/slices/login-slice';
+
+
 
 
 const EditProfile = () => {
+
+  const user = useSelector((state) => state.login.userDetails);
+  // const logout = useSelector((state) => state.logout);
+  console.log(user);
+
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    console.log("In handle logout", logout());
+    dispatch(logout());
+  }
+  
   return (
     <div className={style.ProfileView}>
-
       <div className={style.ProfileViewImageMain}>
         <div className={style.ProfileViewLeft}>
           <div>
@@ -18,33 +33,50 @@ const EditProfile = () => {
           </div>
           <div className={style.ProfileViewTitle}>
             <div className={style.ProfileViewTitleUpper}>
-              <h4>Joe Doe</h4> <p>ADMIN</p></div>
+              <h4>{user.name}</h4>
+            </div>
 
-            <div><p>@London</p></div>
+            <div>{user.role}</div>
           </div>
         </div>
 
-        <Link to="/user/profile/editprofile" style={{ height: '100%' }}>
-          <button type="submit" className="btn btn-primary"
-          >Edit</button>
+        <Link to="/user/profile/editprofile" style={{ height: "100%" }}>
+          <button type="submit" className="btn btn-primary">
+            Edit
+          </button>
         </Link>
       </div>
 
       <div>
-
         <form className="row g-3">
-
           <div className="col-md-6">
             <label className="form-label">Email</label>
-            <input type="email" className="form-control" id="inputEmail4" placeholder='joedoe@gmail.com' />
+            <input
+              type="email"
+              className="form-control"
+              id="inputEmail4"
+              value={user.email}
+            />
           </div>
           <div className="col-md-6">
             <label className="form-label">Phone Number</label>
-            <input type="number" className="form-control" id="number" placeholder='+91 9429198720' />
+            <input
+              type="number"
+              className="form-control"
+              id="number"
+              value={user.contact}
+            />
           </div>
 
-
-
+          <Link to="/">
+            <button
+              type="submit"
+              className="btn btn-secondary"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          </Link>
         </form>
       </div>
     </div>
@@ -68,7 +100,6 @@ const EditProfile = () => {
     //             <div><p>@London</p></div>
     //           </div>
 
-
     //           <button type="submit" className="btn btn-primary"
     //             style={{ height: '100%' }}>Edit</button> </div>
 
@@ -85,8 +116,6 @@ const EditProfile = () => {
     //               <input type="number" className="form-control" id="number" placeholder='+91 9429198720' />
     //             </div>
 
-
-
     //           </form>
     //         </div>
     //       </div>
@@ -98,7 +127,7 @@ const EditProfile = () => {
     //     </div>
     //   </div>
     // </div>
-  )
+  );
 }
 
 export default EditProfile

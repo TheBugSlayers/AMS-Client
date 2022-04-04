@@ -7,11 +7,12 @@ import ProfileNav from '../../components/complexComps/profileComps/ProfileNav';
 import ProfileSideNav from '../../components/complexComps/profileComps/ProfileSideNav';
 import adminAvatarLarge from "../../utils/static/images/adminIconLarge.png";
 import ResetPassword from '../../components/complexComps/profileComps/ResetPassword';
+import AdminDashboardNav from '../../components/complexComps/AdminDashboardNav';
 
 function Profile() {
   return (
     <div className={style.EditProfile}>
-    {/* <ProfileNav page="profilehome" /> */}
+    <AdminDashboardNav />
     <div className='container'>
       <div className={style.ProfileMainContainer}>
       <h4 style={{padding:'27px 0'}}>Profile</h4>

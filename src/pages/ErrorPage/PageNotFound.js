@@ -6,17 +6,22 @@ const PageNotFound = () => {
   
   return (
     <div className={style.PageNotFoundMain}>
-        
-        <div className={style.PageNotFound}>
-            <img
-            alt=''
-             src="https://www.kindpng.com/picc/m/164-1647170_404-page-04-404-error-page-png-transparent.png" />
-            <h1>Page Not Found!</h1>
-          <Link to="/" >  <button id={style.notFound} > Back To Home Page 
-          </button></Link>
-        </div>
+      <div className={style.PageNotFound}>
+        <img
+          alt=""
+          src="https://i.pinimg.com/originals/84/1d/f6/841df65e1fae80904356e1c16bb886b6.jpg"
+        />
+        <h1>Page Not Found!</h1>
+        <Link to="/">
+          {" "}
+          <button className={style.button} id={style.notFound}>
+            {" "}
+            Back To Home Page
+          </button>
+        </Link>
+      </div>
     </div>
-  )
+  );
 }
 
 export default PageNotFound
