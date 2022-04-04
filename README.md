@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# The Bug Slayers - AMS-Client
+## We have created three branch : 
+### 1) main branch - 
+##### - This is for final production of AMS-client
+### 2) dev branch
+##### - This branch is used to merge code development purpose
+### 3) features-branch
+##### - This is features branch used to create multiple features for project, after that merge all code to development branch
+
+### Hosted Project link: https://auditoria-d610d.web.app/
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
